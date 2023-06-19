@@ -2,6 +2,7 @@ import Image from "next/image";
 import { BsFillMoonStarsFill, BsGithub, BsLinkedin } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
 import profile from "../public/pic.png";
+import design from "../public/design.png"
 const Home = () => {
   return (
     <div className=" bg-white px-10">
@@ -22,7 +23,7 @@ const Home = () => {
             </li>
           </ul>
         </nav>
-        <div className="text-center p-10 ">
+        <div className="text-center p-10  ">
           <h2 className="text-5xl py-2 text-teal-600 font-medium">
             Shahma Yousuf
           </h2>
@@ -43,15 +44,26 @@ const Home = () => {
           className="mx-auto  items-center py-10 mt-10 bg-gradient-to-b from-teal-500 rounded-full 
         w-80 h-80 "
         >
-          <Image src={profile} height={300} width={300}></Image>
+          <Image  src={profile} height={300} width={300}></Image>
         </div>
       </section>
       <section>
-        <div >
-          <h3>Services I Offer</h3>
+        <div className="flex items-center flex-col text-center leading-7 text-gray-800 py-10">
+          <h3 className="text-2xl font-semibold">Services I Offer</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem minus fugiat error rerum, 
             <br></br>ab eos iusto. Voluptate nostrum sapiente itaque soluta labore, laborum quos incidunt suscipit fuga unde est?</p>
         </div>
+        <div className="text-center shadow-xl p-10 rounded-xl my-1o">
+          <Image className='mx-auto'src={design} width={100}height={100}></Image>
+          <h3 className="text-base font-medium">Beautiful Designs</h3>
+        <p>Creating elegent designs suited for your needs design theory.</p>
+       
+        </div>
+      </section>
+      <section>
+      <div>
+     <h3 className="text-3xl text-center py-10"> Portfolio</h3>
+      </div>
       </section>
     </div>
   );
