@@ -1,70 +1,152 @@
+"use client";
+
 import Image from "next/image";
 import { BsFillMoonStarsFill, BsGithub, BsLinkedin } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
 import profile from "../public/pic.png";
-import design from "../public/design.png"
+import developer from "../public/developer.png";
+import tools from '../public/tools.png'
+import integration from '../public/integration.png'
+import certificate from "../public/img4.jpeg";
+import { useState } from "react";
 const Home = () => {
+  const [darkMode, setDarkmode] = useState(false);
   return (
-    <div className=" bg-white px-10">
-      <section className="w-full min-h-screen">
-        <nav className="py-10 mb-12 flex justify-between">
-          <h1 className="text-xl font-semibold font-burtons">My Portfolio</h1>
-          <ul className="flex items-center gap-5 ">
-            <li>
-              <BsFillMoonStarsFill className="text-2xl cursor-pointer" />
-            </li>
-            <li>
-              <a
-                className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md font-burtons"
-                href="#"
-              >
-                Resume
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div className="text-center p-10  ">
-          <h2 className="text-5xl py-2 text-teal-600 font-medium">
-            Shahma Yousuf
-          </h2>
-          <h3 className="text-2xl py-2">React Front-End Developer</h3>
-          <p className="text-base leading-7 text-gray-800">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi
-            atque nisi doloribus adipisci,<br></br>
-            dicta ad totam voluptatum blanditiis cupiditate expedita sed tenetur
-            magnam fuga eligendi praesentium iure. Nihil, quos odit?
-          </p>
-        </div>
-        <div className="text-3xl flex gap-14 justify-center py-3 text-gray-700">
-          <GrMail />
-          <BsLinkedin />
-          <BsGithub />
-        </div>
-        <div
-          className="mx-auto  items-center py-10 mt-10 bg-gradient-to-b from-teal-500 rounded-full 
+    <div className={darkMode ? "dark" : ""}>
+      <div className=" bg-white px-8 dark:bg-gray-900">
+        <section className="w-full min-h-screen">
+          <nav className="py-5 mb-12 flex justify-between">
+            <h1 className="text-xl font-semibold font-burtons dark:text-slate-200">
+              My Portfolio
+            </h1>
+            <ul className="flex items-center gap-5 ">
+              <li>
+                <BsFillMoonStarsFill
+                  onClick={() => setDarkmode(!darkMode)}
+                  className="text-2xl cursor-pointer  dark:text-slate-200"
+                />
+              </li>
+              <li>
+                <a
+                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md font-burtons"
+                  href="#"
+                >
+                  Resume
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div className="text-center p-10 flex items-center flex-col  ">
+            <h2 className="text-4xl  py-3 text-teal-600 font-medium md:text-6xl">
+              SHAHMA YOUSUF
+            </h2>
+            <h3 className="text-2xl font-bold py-2 md:text-3xl  dark:text-gray-300">
+              React Front-End Developer
+            </h3>
+            <p className="text- leading-7 text-gray-800 md:text-lg  dark:text-gray-500 md:max-w-3xl ">
+            Passionate and motivated front-end developer eager to learn and grow in the industry. 
+            Excited to take on new challenges and develop my skills further, and constantly exploring new technologies to stay up-to-date with the latest trends. My proficiency in React JS enables me to develop reusable and modular components that enhance code reusability and maintainability. I am also familiar with Redux, React Router, and other popular libraries that complement React JS in building robust web applications.
+            </p>
+          </div>
+          <div className="text-3xl flex gap-14 justify-center py-3 text-gray-700  dark:text-gray-300">
+            <GrMail />
+            <BsLinkedin />
+            <BsGithub />
+          </div>
+          <div
+            className="mx-auto  items-center py-10 mt-10 bg-gradient-to-b from-teal-500 rounded-full 
         w-80 h-80 "
-        >
-          <Image  src={profile} height={300} width={300}></Image>
-        </div>
-      </section>
-      <section>
-        <div className="flex items-center flex-col text-center leading-7 text-gray-800 py-10">
-          <h3 className="text-2xl font-semibold">Services I Offer</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo rem minus fugiat error rerum, 
-            <br></br>ab eos iusto. Voluptate nostrum sapiente itaque soluta labore, laborum quos incidunt suscipit fuga unde est?</p>
-        </div>
-        <div className="text-center shadow-xl p-10 rounded-xl my-1o">
-          <Image className='mx-auto'src={design} width={100}height={100}></Image>
-          <h3 className="text-base font-medium">Beautiful Designs</h3>
-        <p>Creating elegent designs suited for your needs design theory.</p>
-       
-        </div>
-      </section>
-      <section>
-      <div>
-     <h3 className="text-3xl text-center py-10"> Portfolio</h3>
+          >
+            <Image src={profile} height={300} width={300}></Image>
+          </div>
+        </section>
+        <section>
+          <div className="flex items-center flex-col text-center leading-7 text-gray-800 py-5">
+            <h3 className="text-2xl font-semibold md:text-3xl  dark:text-gray-300">
+              Services I Offer
+            </h3>
+            <p className=" md:text-lg md:max-w-3xl dark:text-gray-500">
+            As a React front-end developer, I specialize in creating exceptional user interfaces and delivering seamless user experiences. With expertise in React JS and its ecosystem, I offer a range of services including custom web application development, single-page application (SPA) creation, responsive web design, code optimization, and component library development.
+            </p>
+          </div>
+          <div className="flex max-md:flex-col gap-10 justify-center w-full px-6">
+            <div className=" w-full md:w-[500px] text-center shadow-xl p-10 rounded-xl my-10  dark:bg-slate-100">
+              <Image
+                className="mx-auto drop-shadow-lg"
+                src={developer}
+                width={200}
+                height={200}
+              ></Image>
+              <h3 className="text-base font-medium md:text-xl">
+              Front-End Development
+              </h3>
+              <p className=" md:text-lg">
+              specialize in creating interactive and responsive user interfaces using React js.
+             
+              </p>
+            </div>
+            <div className=" w-full md:w-[500px] text-center shadow-xl p-10 rounded-xl my-10  dark:bg-slate-100">
+              <Image
+                className="mx-auto "
+                src={tools}
+                width={200}
+                height={200}
+              ></Image>
+              <div className="mb-10">
+              <h3 className="text-base font-medium md:text-xl ">
+              Component Libraries and UI Frameworks
+              </h3>
+              <p className=" md:text-lg"> 
+                Creating elegent designs suited for your needs design theory.
+              </p>
+              </div>
+            </div>
+            <div className=" w-full md:w-[500px] text-center shadow-xl p-10 rounded-xl my-10  dark:bg-slate-100">
+              <Image
+                className="mx-auto "
+                src={integration}
+                width={200}
+                height={200}
+              ></Image>
+             
+              <h3 className="text-base font-medium md:text-xl">
+              Migration and Integration
+              </h3>
+              <p className=" md:text-lg">
+              This involves analyzing the current architecture, 
+              identifying integration points, and implementing seamless integration with minimal disruption.
+              </p>
+              
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <h3 className="text-3xl text-center py-5 font-semibold md:text-4xl  dark:text-gray-300">
+              {" "}
+              Portfolio
+            </h3>
+            <p className="flex items-center flex-col text-center leading-7 text-gray-800  md:text-lg  dark:text-gray-500">
+            
+            My portfolio showcases my skills and accomplishments as a React front-end developer. It highlights my expertise in creating engaging user interfaces, building custom web applications, and delivering seamless user experiences
+            </p>
+            <div className="flex max-md:flex-col items-center gap-5 py-10 shadow-xl p-10 rounded-xl">
+              <div>
+                <Image src={certificate} height={400} width={400} />
+              </div>
+              <div>
+                <Image src={certificate} height={400} width={400} />
+              </div>
+              <div>
+                <Image src={certificate} height={400} width={400} />
+              </div>
+              <div>
+                <Image src={certificate} height={400} width={400} />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      </section>
     </div>
   );
 };
