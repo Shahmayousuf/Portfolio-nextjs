@@ -12,7 +12,11 @@ import ecom from '../public/ecommerce.png'
 import netflix from '../public/netflix.png'
 import weather from'../public/weather.png'
 import { useState } from "react";
+import Link from 'next/link'
+import { Tooltip as ReactTooltip } from 'react-tooltip'
+
 const Home = () => {
+
   const [darkMode, setDarkmode] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -52,10 +56,26 @@ const Home = () => {
             </p>
           </div>
           <div className="text-3xl flex gap-14 justify-center py-3 text-gray-700  dark:text-gray-300">
-            <GrMail />
-            <BsLinkedin />
-            <BsGithub />
+            <Link href="mailto:shahmayousuf@gmail.com">
+            <GrMail data-tip="GMail" data-for="GmailTooltip" id="mail-title"/>
+            </Link>
+            <Link href="https://www.linkedin.com/in/shahmayousuf98">
+            <BsLinkedin data-tip="LinkedIn" data-for="linkedinTooltip" id="app-title" /></Link>
+            <Link href="https://github.com/Shahmayousuf">
+            <BsGithub data-tip="GitHub" data-for="GitHubTooltip" id="git-title"/>
+            </Link>
           </div>
+          <ReactTooltip  anchorSelect="#app-title" place="top" effect="solid">
+  LinkedIn
+</ReactTooltip>
+<ReactTooltip  anchorSelect="#git-title" place="top" effect="solid">
+  GitHub
+</ReactTooltip>
+<ReactTooltip  anchorSelect="#mail-title" place="top" effect="solid">
+  GMail
+</ReactTooltip>
+          
+         
           <div
             className="mx-auto  items-center py-10 mt-10 bg-gradient-to-b from-teal-500 rounded-full 
         w-80 h-80 "
