@@ -7,7 +7,10 @@ import profile from "../public/pic.png";
 import developer from "../public/developer.png";
 import tools from '../public/tools.png'
 import integration from '../public/integration.png'
-import certificate from "../public/img4.jpeg";
+import certificate from "../public/certificate.png";
+import ecom from '../public/ecommerce.png'
+import netflix from '../public/netflix.png'
+import weather from'../public/weather.png'
 import { useState } from "react";
 const Home = () => {
   const [darkMode, setDarkmode] = useState(false);
@@ -108,40 +111,47 @@ const Home = () => {
                 width={200}
                 height={200}
               ></Image>
-             
-              <h3 className="text-base font-medium md:text-xl">
+                <div>
+              <h3 className="text-base font-medium md:text-xl mt-9">
               Migration and Integration
               </h3>
               <p className=" md:text-lg">
               This involves analyzing the current architecture, 
               identifying integration points, and implementing seamless integration with minimal disruption.
               </p>
-              
+              </div>
             </div>
           </div>
         </section>
         <section>
-          <div>
+          <div className="flex items-center flex-col">
             <h3 className="text-3xl text-center py-5 font-semibold md:text-4xl  dark:text-gray-300">
               {" "}
               Portfolio
             </h3>
-            <p className="flex items-center flex-col text-center leading-7 text-gray-800  md:text-lg  dark:text-gray-500">
+            <p className=" text-center leading-7 text-gray-800  md:text-lg  dark:text-gray-500 md:max-w-3xl">
             
             My portfolio showcases my skills and accomplishments as a React front-end developer. It highlights my expertise in creating engaging user interfaces, building custom web applications, and delivering seamless user experiences
             </p>
-            <div className="flex max-md:flex-col items-center gap-5 py-10 shadow-xl p-10 rounded-xl">
-              <div>
-                <Image src={certificate} height={400} width={400} />
+            <div className="flex max-md:flex-col items-center gap-10 py-10 shadow-xl p-10 rounded-xl overflow-hidden ">
+          
+              <div className="transform hover:scale-125 transition ease-in duration-500 " >
+                <Image
+                src={certificate} height={400} width={400} />
+                   <h3 className=" dark:text-gray-300 font-semibold text-center">Certificate Generator</h3>
               </div>
-              <div>
-                <Image src={certificate} height={400} width={400} />
+             
+              <div className="transform hover:scale-125 transition ease-in duration-500 " >
+                <Image src={ecom} height={400} width={400} />
+                <h3 className=" dark:text-gray-300 font-semibold text-center">E-commerce App</h3>
               </div>
-              <div>
-                <Image src={certificate} height={400} width={400} />
+              <div className="transform hover:scale-125 transition ease-in duration-500 " >
+                <Image src={netflix} height={400} width={400} />
+                <h3 className="  dark:text-gray-300 font-semibold text-center">Netflix clone</h3>
               </div>
-              <div>
-                <Image src={certificate} height={400} width={400} />
+              <div className="transform hover:scale-125 transition ease-in duration-500 " >
+                <Image src={weather} height={400} width={400} />
+                <h3 className="  dark:text-gray-300 font-semibold text-center">Weather App</h3>
               </div>
             </div>
           </div>
