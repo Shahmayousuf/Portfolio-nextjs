@@ -45,7 +45,7 @@ const Home = () => {
             </ul>
           </nav>
           <div className="text-center p-10 flex items-center flex-col  ">
-            <h2 className="text-4xl  py-3 text-teal-600 font-medium md:text-6xl">
+            <h2 className="text-4xl  py-1 text-teal-600 font-medium md:text-5xl ">
               SHAHMA YOUSUF
             </h2>
             <h3 className="text-2xl font-bold py-2 md:text-3xl  dark:text-gray-300">
