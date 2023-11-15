@@ -35,7 +35,7 @@ const Home = () => {
               </li>
 
               <Link
-                href="/cv%20shahmayousuf.pdf "
+                href=" "
                 className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md font-burtons"
               ><li>
                 Resume
