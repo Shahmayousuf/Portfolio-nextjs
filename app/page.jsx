@@ -10,8 +10,7 @@ import integration from "../public/integration.png";
 import certificate from "../public/certificate.png";
 import ecom from "../public/ecommerce.png";
 import netflix from "../public/netflix.png";
-import weather from "../public/weather.png";
-// import pdf from "../public/cv/CV-shahmayousuf.pdf"
+import  shobha from "../public/shobha.png"
 import { useState } from "react";
 import Link from "next/link";
 import { Tooltip as ReactTooltip } from "react-tooltip";
@@ -35,7 +34,8 @@ const Home = () => {
               </li>
 
               <Link
-                href=" "
+                // href="/cv%20shahmayousuf.pdf "
+                href="https://drive.google.com/file/d/1-CwdYBdyJXx-wSTEE_jPUbAOO9idlC-l/view?usp=sharing"
                 className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md font-burtons"
               ><li>
                 Resume
@@ -202,9 +202,9 @@ const Home = () => {
                 </h3>
               </div>
               <div className="transform hover:scale-125 transition ease-in duration-500 ">
-                <Image src={weather} height={400} width={400} />
+                <Image src={shobha} height={400} width={400} />
                 <h3 className="  dark:text-gray-300 font-semibold text-center">
-                  Weather App
+              ShobhaGold
                 </h3>
               </div>
             </div>
